@@ -1,5 +1,5 @@
 $heading-font: 'Unbounded';
-$paragraph-font: 'Nunito';
+$paragraph-font: 'IBM Plex Sans', sans-serif;
 $code-font: 'Source Code Pro', monospace;
 
 body {
@@ -8,6 +8,10 @@ body {
 
 h1, h2 {
     font-family: $heading-font;
+}
+
+#heading-container h3 {
+    font-family: $code-font;
 }
 
 header {
@@ -21,12 +25,6 @@ header {
     font-family: $code-font;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-}
-
-#heading-container {
-    h3 {
-        font-family: $code-font;
-    }
 }
 
 p {
@@ -66,4 +64,9 @@ p {
 #item4 {
     grid-row: 2 / span 2;
     background-image: url('assets/notes.jpg');
+}
+
+
+#blog-post-container h3 {
+    font-family: $paragraph-font;
 }
