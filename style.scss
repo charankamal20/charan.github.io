@@ -8,10 +8,20 @@ body {
 
 h1, h2 {
     font-family: $heading-font;
+    font-weight: 900;
 }
 
 #heading-container h3 {
     font-family: $code-font;
+}
+
+.banner-h1-font {
+    font-weight: normal;
+    text-shadow: -2px -2px 0 #585858, 2px -2px 0 #585858, -2px 2px 0 #585858, 2px 2px 0 #585858;
+}
+
+.banner-h1-font:hover {
+    text-shadow: none;
 }
 
 header {
@@ -36,6 +46,10 @@ p {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 3% 2%;
+
+    h3 {
+        font-family: $code-font;
+    }
 }
 
 .grid-item {
