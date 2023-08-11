@@ -26,16 +26,17 @@ h1, h2 {
 
 header {
     --mask: linear-gradient(to right, 
-      rgba(0,0,0, 0) 0,   rgba(0,0,0, 1) 40%, 
-      rgba(0,0,0, 0) 98%, rgba(0,0,0, 0) 0
+      rgba(0,0,0, 0) 0%, rgba(0,0,0, 1) 25%, 
+      rgba(0,0,0, 1) 75%, rgba(0,0,0, 0) 100%
     ) 100% 50% / 100% 100% repeat-x;
-  
-    -webkit-mask: var(--mask); 
+
+    -webkit-mask: var(--mask);
     mask: var(--mask);
     font-family: $code-font;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+
 
 p {
     font-family: $paragraph-font;
