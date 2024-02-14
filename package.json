@@ -1,5 +1,5 @@
 {
-  "homepage": "https://charankamal20.github.io/portfolio-react",
+  "homepage": "https://charankamal20.github.io/portfolio-react/",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -13,10 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "framer-motion": "^11.0.3",
     "github-pages": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
