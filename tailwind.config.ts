@@ -1,8 +1,23 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
+// const defaultTheme = require("tailwindcss/defaultTheme");
+// const colors = require("tailwindcss/colors");
+// import { defaultTheme } from "tailwindcss/defaultTheme";
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+// const {
+//   default: flattenColorPalette,
+// } = require("tailwindcss/lib/util/flattenColorPalette");
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        purple: "#855aff",
+        primary: "#FF0000",
+        secondary: "#00FF00",
+        tertiary: "#0000FF",
+      },
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -47,6 +62,18 @@ export default {
       },
     },
   },
-  plugins: [],
-};
+  plugins: [
+    addVariablesForColors,
+  ],
+} satisfies Config;
 
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
