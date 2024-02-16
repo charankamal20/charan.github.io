@@ -13,6 +13,43 @@ body {
   background-color: rgb(10 10 10);
 }
 
+
+* {
+    /* cursor: none; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+@layer components{
+  .marquee-30{
+    animation: marquee 45s linear infinite;
+  }
+  .marquee-15{
+    animation: marquee 30s linear infinite;
+  }
+  .marquee-10{
+    animation: marquee 15s linear infinite;
+  }
+  .fade-edge{
+      -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 5%,
+      white 95%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+}
+
+@keyframes marquee{
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
 .animation-delay-0 {
   animation-delay: 0s;
 }
@@ -38,10 +75,17 @@ body {
 
 .mask {
   font-weight: 500;
+  -webkit-mask-origin: border-box;
+  mask-origin: border-box;
   mask-image: url("assets/mask.svg");
   mask-repeat: no-repeat;
   mask-size: 40px;
   background: #855aff;
   position: absolute;
   color: black;
+}
+
+.blog-sidebar {
+  @apply transition duration-300 transform hover:translate-y-[2px] hover:text-white;
+  font-weight: 600;
 }

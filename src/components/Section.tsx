@@ -15,8 +15,8 @@ interface Props {
 function Section({id, className, heading, content, children, onMouseEnter, onMouseLeave}: Props) {
   return (
     <section
-      onMouseEnter={() => onMouseEnter(true)}
-      onMouseLeave={() => onMouseLeave(false)}
+      onMouseEnter={() => onMouseEnter && onMouseEnter(true)}
+      onMouseLeave={() => onMouseLeave && onMouseLeave(false)}
       id={id}
       className={cn("w-full px-4 mt-12 space-y-3", className)}
     >
