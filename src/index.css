@@ -10,9 +10,8 @@
 }
 
 body {
-  background-color: rgb(10 10 10);
+  @apply bg-neutral-900;
 }
-
 
 * {
     /* cursor: none; */
@@ -77,7 +76,7 @@ body {
   font-weight: 500;
   -webkit-mask-origin: border-box;
   mask-origin: border-box;
-  mask-image: url("assets/mask.svg");
+  mask-image: url("/public/assets/mask.svg");
   mask-repeat: no-repeat;
   mask-size: 40px;
   background: #855aff;

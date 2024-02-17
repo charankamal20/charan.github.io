@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function useScrollPosition() {
   const [mouseCord, setMouseCord] = useState({ scrollX: 0, scrollY: 0 });
@@ -6,7 +6,7 @@ function useScrollPosition() {
   const handleScroll = () => {
     setMouseCord({ scrollX: window.scrollX, scrollY: window.scrollY });
     // setmouseCord({ x: mousePosition.x + e.deltaX, y: mousePosition.y + e.deltaY });
-    console.log(window.scrollX, window.scrollY + mouseCord.scrollY);
+    // console.log(window.scrollX, window.scrollY + mouseCord.scrollY);
     // console.log(`x: ${mouseCord.x}, y: ${mouseCord.y}`);
   };
 
@@ -17,7 +17,9 @@ function useScrollPosition() {
     return () => window.removeEventListener("wheel", handleScroll);
   }, []);
 
-  return mouseCord;
+  const memoizedMouseCord = useMemo(() => mouseCord, [mouseCord]);
+
+  return memoizedMouseCord;
 }
 
 export default useScrollPosition;

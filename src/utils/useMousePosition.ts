@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const updateMousePosition = (e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
-    // console.log(`x: ${e.clientX}, y: ${e.clientY}`);
-
   };
 
   useEffect(() => {
@@ -16,7 +14,10 @@ const useMousePosition = () => {
     return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
 
-  return mousePosition;
+  const memoizedMousePosition = useMemo(() => mousePosition, [mousePosition]);
+
+  return memoizedMousePosition;
+  
 };
 
 export default useMousePosition;
