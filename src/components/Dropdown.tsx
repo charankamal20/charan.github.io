@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface Props {
     state: boolean;
     setState: (state: boolean) => void;
@@ -18,10 +16,10 @@ const items = [
 
 function Dropdown({ state=true, setState }: Props) {
   return (
-    <aside onMouseLeave={() => setState(false)} className={`${state ? 'block' : 'hidden'} w-32 absolute bottom-14 left-0 bg-neutral-800 rounded-lg`} >
+    <aside onMouseLeave={() => setState(false)} className={`${state ? 'block' : 'hidden'} drop-shadow-md border border-neutral-700 backdrop-blur-sm w-32 absolute bottom-14 left-0 bg-neutral-800/90 rounded-lg`} >
         <ul className=''>
             {items.map((item, index) => (
-                <li key={index} className="rounded-md hover:bg-neutral-900 transition-all cursor-pointer h-8 flex justify-start p-2 m-2 items-center">
+                <li key={index} className="rounded-md hover:bg-neutral-900 transition-all cursor-pointer h-8 flex justify-start p-2 m-1 items-center">
                     {item.name}
                 </li>
             ))}

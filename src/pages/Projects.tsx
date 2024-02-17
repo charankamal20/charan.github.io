@@ -11,21 +11,21 @@ const projectData = [
     description:
       "AuthNex is a robust full-stack authentication application leveraging Next.js, Auth.js (NextAuth.js), and PostgreSQL. Through seamless integration with backend databases and APIs, it offers OAuth and Two-factor Authentication functionalities. Additionally, role-based access control ensures secure API routes and server actions, making AuthNex a reliable solution for modern authentication needs.",
     link: "https://auth-nex.vercel.app/",
-    imageUrl: "public/assets/authnex.png",
+    imageUrl: "assets/authnex.png",
   },
   {
     title: "NexDrop",
     description:
       "A full-stack Dropbox replica utilizing Next.js 14, enabling seamless file uploads to Firebase Storage. Implemented robust CRUD functionality for enhanced user interaction. Designed an intuitive UI/UX with Shadcn/ui for visual appeal, fortified with Firebase Authentication for secure access management.",
     link: "https://nex-drop.vercel.app/",
-    imageUrl: "public/assets/nex-drop.png",
+    imageUrl: "assets/nex-drop.png",
   },
   {
     title: "BookTrackr",
     description:
       "BookTrackr: a dynamic to-do list app for book enthusiasts. Powered by React.js, Firebase Authentication and Storage, Shadcn/ui, TypeScript, and Tailwind CSS, BookTrackr empowers users to manage their reading goals, track progress, and annotate chapters with ease. Through this project, I honed my skills in dynamic data management, ensuring seamless user interactions and responsive interfaces.",
     link: "https://booktrackr.vercel.app/",
-    imageUrl: "public/assets/bookTrackr.png",
+    imageUrl: "assets/bookTrackr.png",
   },
 ];
 
