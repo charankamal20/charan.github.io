@@ -6,6 +6,27 @@ import { motion } from "framer-motion";
 import useScrollPosition from "./utils/useScrollPosition";
 import { ProgressiveBlur } from "./components/ui/infiniteScroll";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { CgArrowRight } from "react-icons/cg";
+
+const contactSources = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/charan-singh-1a1b3b1b4/",
+  },
+  {
+    name: "GitHub",
+    url: "",
+  },
+  {
+    name: "Twitter",
+    url: "",
+  },
+  {
+    name: "Medium",
+    url: "",
+  },
+];
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -16,7 +37,7 @@ function App() {
   return (
     <main className="relative sm:cursor-none">
       <Navbar />
-      <div className="text-neutral-300 bg-neutral-950 w-full flex flex-col items-center">
+      <div className="cursor-auto text-neutral-300 bg-neutral-900 w-full flex flex-col items-center">
         <div className="max-w-2xl">
           <Header
             className="scale-125"
@@ -41,16 +62,25 @@ function App() {
           <Section id="skills" heading="Skills">
             <ul className="w-full grid grid-cols-2">
               <div>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
+                <h2 className="w-fit font-semibold overflow-hidden flex flex-col">
+                  Proficient
+                </h2>
+                <div className="p-2 text-neutral-400">
+                  <li>React</li>
+                  <li>Tailwind CSS</li>
+                  <li>Framer Motion</li>
+                  <li>JavaScript</li>
+                  <li>Java, C/C++, Python</li>
+                </div>
               </div>
               <div>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-                <li>Express</li>
+                <h2 className="font-semibold">Learning</h2>
+                <div className="p-2 text-neutral-400">
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                </div>
               </div>
             </ul>
           </Section>
@@ -71,7 +101,7 @@ function App() {
                     frameBorder="0"
                   ></iframe> */}
                   <img
-                    className="w-full  -mt-4 group-hover:blur-sm transition"
+                    className="w-full -mt-4 group-hover:blur-sm transition"
                     src="src/assets/authnex.png"
                     alt=""
                   />
@@ -86,7 +116,7 @@ function App() {
                   </div>
                 </div>
               </a>
-              <p className="w-full text-left tracking-normal">
+              <p className="w-full p-4 tracking-normal">
                 AuthNex is a full-stack authentication application that uses
                 Next.js, Tailwind CSS, and PostgreSQL. AuthNex is a full-stack
                 authentication application that uses Next.js.
@@ -114,25 +144,51 @@ function App() {
               </div>
             </div>
           </Section>
-          <Section id="contact" heading="Contact">
-            <form action="submit" className="bg-transparent">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-2 rounded-md"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full p-2 rounded-md"
-              />
-              <input
-                type="submit"
-                value="Send"
-                className="w-full p-2 rounded-md bg-primary-500 text-neutral-950"
-              />
-            </form>
+          <Section id="connect" heading="Connect" className="space-y-6">
+            <ul className="relative">
+              {contactSources.map((source) => (
+                <a target="_blank" rel="noreferrer noopener" href={source.url}>
+                  <li
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    key={source.name}
+                    className="w-fit group flex gap-1 items-center"
+                  >
+                    <span className="cursor-pointer group-hover:font-semibold group-hover:text-white transition-all">
+                      {source.name}{" "}
+                    </span>
+                    <CgArrowRight className="transition-all group-hover:delay-0 delay-150 group-hover:opacity-100 group-hover:translate-x-1 -translate-x-1 opacity-0" />
+                  </li>
+                </a>
+              ))}
+            </ul>
+            <div className="shadow-lg sm:p-2 flex flex-col cursor-auto w-full bg-neutral-950 rounded-xl">
+              <p className="text-sm m-4 sm:mx-0 sm:px-6">
+                Subscribe to my newsletter to get regular updates on resources
+                and blog posts.
+              </p>
+              <form
+                action="submit"
+                className="px-4 gap-y-2 max-sm:text-sm flex sm:flex-row flex-col sm:px-6 sm:pb-6 w-full sm:gap-x-2"
+              >
+                <input
+                  type="email"
+                  placeholder="johnodoe@gmail.com"
+                  className="p-2 sm:flex-grow rounded bg-neutral-200 outline-none caret-purple text-black"
+                />
+                <div className="max-sm:mb-4 max-sm:h-9 relative w-24 sm:w-32 group bg-transparent">
+                  <button
+                    type="submit"
+                    className="transition-all duration-500 group-hover:font-medium sm:group-hover:-translate-y-1 absolute z-10 rounded-md top-0 w-full h-full p-2 bg-neutral-800 text-neutral-300"
+                  >
+                    Subscribe
+                  </button>
+                  <div className="z-0 opacity-0 duration-300 group-hover:opacity-100 transition h-full w-full max-sm:group-hover:translate-y-1 group-hover:translate-x-1 rounded-md bg-purple"></div>
+                </div>
+              </form>
+            </div>
           </Section>
+          <Footer />
         </div>
       </div>
       {/* // Masked content */}
@@ -171,16 +227,23 @@ function App() {
           <Section id="skills" heading="Skills">
             <ul className="w-full grid grid-cols-2">
               <div>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>Tailwind CSS</li>
+                <h2 className="font-semibold">Proficient</h2>
+                <div className="p-2">
+                  <li>React</li>
+                  <li>Tailwind CSS</li>
+                  <li>Framer Motion</li>
+                  <li>JavaScript</li>
+                  <li>Java, C/C++, Python</li>
+                </div>
               </div>
               <div>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node.js</li>
-                <li>Express</li>
+                <h2 className="font-semibold">Learning</h2>
+                <div className="p-2">
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                </div>
               </div>
             </ul>
           </Section>
@@ -200,7 +263,7 @@ function App() {
                   </div>
                 </div>
               </a>
-              <p className="w-full text-left tracking-normal">
+              <p className="w-full p-4 text-justify tracking-normal">
                 AuthNex is a full-stack authentication application that uses
                 Next.js, Tailwind CSS, and PostgreSQL. AuthNex is a full-stack
                 authentication application that uses Next.js.
@@ -209,7 +272,7 @@ function App() {
           </Section>
           <Section className="" id="Blog" heading="Blog">
             <div className="flex flex-col gap-4">
-              <div className="h-20 w-full"></div>
+              <div className="h-20 w-full filter z-50"></div>
               <div className="">
                 <a
                   className="pt-6"
@@ -228,10 +291,28 @@ function App() {
               </div>
             </div>
           </Section>
-          <Section id="contact" heading="Contact">
-            <form action="submit" className="bg-transparent">
-              
-            </form>
+          <Section id="connect" heading="Connect" className="space-y-6">
+            <ul
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="relative"
+            >
+              {contactSources.map((source) => (
+                <a target="_blank" rel="noreferrer noopener" href={source.url}>
+                  <li
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    key={source.name}
+                    className="w-fit group flex gap-1 items-center"
+                  >
+                    <span className="cursor-pointer group-hover:font-semibold group-hover:text-white transition-all">
+                      {source.name}{" "}
+                    </span>
+                    <CgArrowRight className="transition-all group-hover:delay-0 delay-150 group-hover:text-white group-hover:opacity-100 group-hover:translate-x-1 -translate-x-1 opacity-0" />
+                  </li>
+                </a>
+              ))}
+            </ul>
           </Section>
         </div>
       </motion.div>
