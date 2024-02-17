@@ -41,7 +41,7 @@ function App() {
         <div className="max-w-2xl">
           <Header
             className="scale-125"
-            image={"src/assets/profilePhoto.png"}
+            image={"assets/profilePhoto.png"}
             heading="Hi!"
             subHeading="I am Charan"
             mouseState={setIsHovered}
@@ -102,7 +102,7 @@ function App() {
                   ></iframe> */}
                   <img
                     className="w-full -mt-4 group-hover:blur-sm transition"
-                    src="src/assets/authnex.png"
+                    src="assets/authnex.png"
                     alt=""
                   />
                   <div className="flex duration-300 justify-center items-center text-sm absolute top-0 left-0 w-full h-full z-10 bg-transparent group-hover:bg-neutral-950/60  transition">
@@ -137,7 +137,7 @@ function App() {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     className="filter grayscale sm:blur-sm rounded-md cursor-grab hover:scale-95 transition hover:duration-100 duration-700"
-                    src="src/assets/blog.png"
+                    src="assets/blog.png"
                     alt="Blog Image"
                   />
                 </a>
@@ -205,7 +205,7 @@ function App() {
         <div className="max-w-2xl">
           <Header
             className="mt-3 scale-[1.40] group-hover:scale-150"
-            image="src/assets/cat.png"
+            image="assets/cat.png"
             heading="Hi!"
             subHeading="I am classikh"
             mouseState={setIsHovered}
@@ -284,7 +284,7 @@ function App() {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     className="rounded-md filter mix-blend-multiply cursor-grab transition hover:duration-100 duration-700"
-                    src="src/assets/blog.png"
+                    src="assets/blog.png"
                     alt="Blog Image"
                   />
                 </a>
