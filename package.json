@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.1.0",
     "@react-email/render": "^0.0.12",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.5",

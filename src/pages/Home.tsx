@@ -7,8 +7,13 @@ import useScrollPosition from "../utils/useScrollPosition";
 import { ProgressiveBlur } from "../components/ui/infiniteScroll";
 import { CgArrowRight } from "react-icons/cg";
 import Layout from "../components/Layouts/layout";
+import { ContactForm } from "../components/ContactForm";
 
 const contactSources = [
+  {
+    name: "Email",
+    url: "mailto:charankamal20@gmail.com",
+  },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/charan-singh-1a1b3b1b4/",
@@ -19,7 +24,7 @@ const contactSources = [
   },
   {
     name: "Twitter",
-    url: "",
+    url: "https://twitter.com/charandoesitall",
   },
   {
     name: "Medium",
@@ -171,27 +176,7 @@ function Home() {
                   Subscribe to my newsletter to get regular updates on resources
                   and blog posts.
                 </p>
-                <form
-                  action="https://docs.google.com/forms/d/e/1FAIpQLSedLKwlKVzGLvT1koSzre4TRMaIaZ1ZGWYyNgzHwJVmdozUag/formResponse"
-                  className="px-4 gap-y-2 max-sm:text-sm flex sm:flex-row flex-col sm:px-6 sm:pb-6 w-full sm:gap-x-2"
-                >
-                  <input
-                    name="entry.2114608564"
-                    required
-                    type="email"
-                    placeholder="johndoe@gmail.com"
-                    className="p-2 sm:flex-grow rounded bg-neutral-200 outline-none caret-purple text-black"
-                  />
-                  <div className="max-sm:mb-4 max-sm:h-9 relative w-24 sm:w-32 group bg-transparent">
-                    <button
-                      type="submit"
-                      className="transition-all duration-500 group-hover:font-medium sm:group-hover:-translate-y-1 absolute z-10 rounded-md top-0 w-full h-full p-2 bg-neutral-800 text-neutral-300"
-                    >
-                      Subscribe
-                    </button>
-                    <div className="z-0 opacity-0 duration-300 group-hover:opacity-100 transition h-full w-full max-sm:group-hover:translate-y-1 group-hover:translate-x-1 rounded-md bg-purple"></div>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
             </Section>
           </div>

@@ -46,7 +46,7 @@ function HamburgerMenu() {
               ? "h-0 w-0 -rotate-180 duration-300"
               : "hover:rotate-90  h-8 w-8"
           } cursor-pointer delay-300 hover:delay-0 transition-all duration-500`}
-          src="public/assets/favicon.ico"
+          src="assets/favicon.ico"
           alt="Logo"
         />
         <CgCloseR

@@ -13,7 +13,7 @@ function Header({heading, subHeading, mouseState, image, className}: Props) {
     <header onMouseEnter={() => mouseState && mouseState(true)} onMouseLeave={() => mouseState && mouseState(false)} className="w-full antialiased mt-12 bg-transparent p-4 space-x-5 flex justify-start items-center">
       <div className="group cursor-context-menu drop-shadow-lg h-20 w-20 rounded-full overflow-hidden">
         <img
-          className={cn("group-hover:scale-[1.20] transition", className)}
+          className={cn("grayscale group-hover:scale-[1.2] transition", className)}
           src={image}
           alt="Profile Image"
         />
