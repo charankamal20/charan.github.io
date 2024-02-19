@@ -8,7 +8,6 @@ import { ProgressiveBlur } from "../components/ui/infiniteScroll";
 import { CgArrowRight } from "react-icons/cg";
 import Layout from "../components/Layouts/layout";
 
-
 const contactSources = [
   {
     name: "LinkedIn",
@@ -16,7 +15,7 @@ const contactSources = [
   },
   {
     name: "GitHub",
-    url: "",
+    url: "https://github.com/charankamal20",
   },
   {
     name: "Twitter",
@@ -24,12 +23,11 @@ const contactSources = [
   },
   {
     name: "Medium",
-    url: "",
+    url: "https://medium.com/@classikh",
   },
 ];
 
 function Home() {
-
   const [isHovered, setIsHovered] = useState(false);
   const { scrollX, scrollY } = useScrollPosition();
   const { x, y } = useMousePosition();
@@ -174,12 +172,14 @@ function Home() {
                   and blog posts.
                 </p>
                 <form
-                  action="submit"
+                  action="https://docs.google.com/forms/d/e/1FAIpQLSedLKwlKVzGLvT1koSzre4TRMaIaZ1ZGWYyNgzHwJVmdozUag/formResponse"
                   className="px-4 gap-y-2 max-sm:text-sm flex sm:flex-row flex-col sm:px-6 sm:pb-6 w-full sm:gap-x-2"
                 >
                   <input
+                    name="entry.2114608564"
+                    required
                     type="email"
-                    placeholder="johnodoe@gmail.com"
+                    placeholder="johndoe@gmail.com"
                     className="p-2 sm:flex-grow rounded bg-neutral-200 outline-none caret-purple text-black"
                   />
                   <div className="max-sm:mb-4 max-sm:h-9 relative w-24 sm:w-32 group bg-transparent">
@@ -304,7 +304,7 @@ function Home() {
               >
                 {contactSources.map((source, index) => (
                   <a
-                  key={index}
+                    key={index}
                     target="_blank"
                     rel="noreferrer noopener"
                     href={source.url}

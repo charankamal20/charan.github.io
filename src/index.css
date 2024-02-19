@@ -12,6 +12,16 @@
 body {
   @apply bg-neutral-900;
 }
+/*
+main {
+  filter: invert(95%) hue-rotate(180deg);
+
+}
+
+img {
+  filter: invert(95%) hue-rotate(180deg);
+
+} */
 
 * {
     /* cursor: none; */
