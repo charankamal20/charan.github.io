@@ -17,7 +17,7 @@ const useMousePosition = () => {
   const memoizedMousePosition = useMemo(() => mousePosition, [mousePosition]);
 
   return memoizedMousePosition;
-  
+
 };
 
 export default useMousePosition;

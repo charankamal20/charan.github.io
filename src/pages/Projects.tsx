@@ -33,7 +33,7 @@ function Projects() {
   return (
     <Layout>
       <div className="mx-auto w-full max-w-2xl text-neutral-300">
-        <Section id="projects-page" heading="Projects" content="">
+        <Section revealDisabled={true} id="projects-page" heading="Projects" content="">
           <TextGenerateEffect words="Creating digital footprints that leave an impression." />
         </Section>
         <Section id="list" heading="">

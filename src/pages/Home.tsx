@@ -8,6 +8,7 @@ import { ProgressiveBlur } from "../components/ui/infiniteScroll";
 import { CgArrowRight } from "react-icons/cg";
 import Layout from "../components/Layouts/layout";
 import { ContactForm } from "../components/ContactForm";
+import Reveal from "../components/motion/reveal";
 
 const contactSources = [
   {
@@ -38,18 +39,21 @@ function Home() {
   const { x, y } = useMousePosition();
   const size = isHovered ? 150 : 20;
 
+
   return (
     <Layout>
       <div className="relative sm:cursor-none">
         <div className="cursor-auto text-neutral-300 bg-neutral-900 w-full flex flex-col items-center">
           <div className="max-w-2xl">
-            <Header
-              className="scale-125"
-              image={"assets/profilePhoto.png"}
-              heading="Hi!"
-              subHeading="I am Charan"
-              mouseState={setIsHovered}
-            />
+            <Reveal>
+              <Header
+                className="scale-125"
+                image={"assets/profilePhoto.png"}
+                heading="Hi!"
+                subHeading="I am Charan"
+                mouseState={setIsHovered}
+              />
+            </Reveal>
             <Section
               id="about"
               heading="About"

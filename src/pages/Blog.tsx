@@ -7,6 +7,7 @@ function Blog() {
     <Layout>
       <div className="max-w-2xl text-neutral-300 w-full mx-auto">
         <Section
+          revealDisabled={true}
           heading="Blog"
           id="blog-page"
           content="Find all my blogs on medium."

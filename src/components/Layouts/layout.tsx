@@ -3,16 +3,15 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import HamburgerMenu from '../HamburgerMenu';
 
-function Layout({children} : { children: React.ReactNode }) {
-
+function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main className=''>
-        <Navbar />
-        <HamburgerMenu />
-        {children}
-        <Footer />
-    </main>
-  )
+    <>
+      <Navbar />
+      <HamburgerMenu />
+      {children}
+      <Footer />
+    </>
+  );
 }
 
-export default Layout;
+export default React.memo(Layout);
