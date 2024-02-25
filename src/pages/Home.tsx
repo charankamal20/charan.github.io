@@ -31,6 +31,10 @@ const contactSources = [
     name: "Medium",
     url: "https://medium.com/@classikh",
   },
+  {
+    name: "Resume",
+    url: "https://drive.google.com/file/d/1HLzQW4HC1SWlQ0isQO9l-cEHBAQ07o2E/view?usp=sharing",
+  },
 ];
 
 function Home() {
